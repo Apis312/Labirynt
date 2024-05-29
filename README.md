@@ -8,6 +8,14 @@ treść zadania :
   - @, punkt docelowy.
   Aplikacja na wyjściu wypisuje ciąg kroków, nieoddzielonych żadnymi znakami (tj. spacje, nowe linie), który wystarczy do przejścia labiryntu od początku do końca. Droga nie musi być optymalna i uwzględnia nawroty.
 
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Instrukcja
+Program nie wymaga żadnych dodatkowych instalacji. 
+Plik w którym znajduje się labirynt do czytania powinien nazywać się "plik" i mieć rozszerzenie .txt 
+Jego lokalizacja to główny katalog projektu. Jeśli chcemy by nasz plik nazywał się inaczej / znajdował się w innym miejscu należy zmienić zawartość zmiennej w pliku Wczytaj.
+
+Dodatkowe informacje o tym jak samodzielnie zagrać, zostają podane na wyjście konsoli po wybraniu opcji odpowiedzialnej za funkcję "graj"
+
 ----------------------------------------------------------------------------------------------------------------------
 Opis programu 
 
