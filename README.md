@@ -34,6 +34,18 @@ Program podzielony jest na kilka plików. Zawierają one implementacje określon
   Gracz może przemieszczać "$" podając w konsoli kierunek przemieszczenia jako kierunek geograficzny N-góra E-lewo itd.
   Przed wykonaniem polecenia program sprawdza czy ruch jest możliwy - czy nie jest to próba wejścia w ścianę lub wyjścia poza rozmiar tablicy.
   Gra kończy się gdy gracz doprowadzi "$" do pozycji na której znajduje się "@"
+
+  Samograj
+  Początek pliku jest taki sam jak w "Graj". Program znajduje istotne dla niego symbole "$" , "@".
+  By przejść labirynt samodzielnie labirynt stosuje metodę poruszania się wzdłuż ściany po prawej stronie. Najpierw zawsze stara się iść w prawo. 
+  Kierunki dostępne w grze przechowywane są w tablicy {n,e,s,w} a zmienna k przechowuje nasze obecne "prosto". Jeśli k = 0 za prosto uznamy kierunek n, jeśli k = 2 to za "prosto" usnamy kierunek s.
+  Program będzie się starał skręcić w prawo. Gdzie prawo rozumiane jest jako k + 1. Jeśli jest to możliwe to k = k + 1. Sprawia to że to co wcześniej było prawą stroną jest teraz postrzegane jako prosto. 
+  Jeśli zwrot w prawo nie jest możliwy program sprawdzi możliwość przemieszczenia się na wprost. Jeśli to też nie jest możliwe spróbuje zwrotu w lewo. W ostateczności zawróci. 
+  Trasa jaką przebędzie nasz samograj jest przechowywana w zmiennej rozwiązanie (typ string). Jeśli dany ruch został uznany za poprawny to dodajemy go do rozwiązania(konkatenacja) rozwiązanie = rozwiązanie + "s".
+  Aby nie doszło do sytuacji w której k > 3 lub k < 0 wprowadziłem instrukcje if które dodają lub odejmują wartość 4. Jest tak dlatego że k = 4 było by jednoznaczne z k = 0, tzn. zostałby wykonany pełen obrót.
+Jako że program zwraca trasę - nie pokazuje przebiegu na żywo, nie jest konieczne podmienianie znaków w tablicy. 
+Gdy wsp. uznawane za $ pokryją się z wsp znaku "@" program opuszcza pętlę i wypisuje swoją trasę do konsoli.
+Zamieszczam też plik z rysunkiem którym pomagałem sobie w projektowaniu tej funkcji programu.
   
   
   
