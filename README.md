@@ -17,6 +17,9 @@ Program podzielony jest na kilka plików. Zawierają one implementacje określon
   Główny plik zawierający funkcję main zawiera "menu" aplikacji. Za pomocą scannera oraz instrukcji switch pozwala wybrać którą funkcję programu chcemy wykorzystać. Konieczne było zaimportowanie jedynie java.util.Scanner. W pliku tym zostaje też zainicjalizowana tablica dwuwymiarowa typu char[][] która będzie służyła do przechowywania labiryntu.
   W przypadku wyboru ręcznego wpistwania w pliku main jest zaimplementowana funkcjonalność samodzielnego utworzenia labiryntu przez podanie wymiarów tablicy a następnie wypełnienie jej dozwolonymi znakami. Program sprawdzi czy stworzony w ten sposób labirynt zawiera "$" oraz "@", jeśli nie to poinformuje że lab. nie zawiera punktu początkowego lub końcowego 
 
+  Wpisz_labirynt
+  Plik zawiera bardzo prostą możliwość ręcznego wpisania labiryntu. Podaje się wysokość i szerokość (wymiar tablicy) a następnie wypełnia tablicę znakami. Sprawdzana jest poprawność wymiarów (czy są większe od 0). Program na bierząco sprawdza czy podany znak jest poprawny - nie pozwoli wypełnić tablicy np.literami.
+
   Wczytaj
   Plik ten zawiera funkcję która pozwala wczytać labirynt z pliku txt. W obecnej formie plik musi znajdować się w katalogu głównym projektu, jednak można wskazać inny plik zmieniając zawartość zmiennej "plik" np. na inną nazwę lub ścierzkę do innego pliku. 
   Do wczytywania labiryntu użyto java.io.BufferedReader, java.io.FileReader. Na wypadek gdyby plik nie istniał konieczna jest też obsługa wyjątków - zaimportowanie java.util.IOException. Zaimportowanie ArrayList oraz list pomaga nam obejść to że domyślne tablice w 
