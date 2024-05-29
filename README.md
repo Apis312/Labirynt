@@ -15,6 +15,7 @@ Program podzielony jest na kilka plików. Zawierają one implementacje określon
 
   Main
   Główny plik zawierający funkcję main zawiera "menu" aplikacji. Za pomocą scannera oraz instrukcji switch pozwala wybrać którą funkcję programu chcemy wykorzystać. Konieczne było zaimportowanie jedynie java.util.Scanner. W pliku tym zostaje też zainicjalizowana tablica dwuwymiarowa typu char[][] która będzie służyła do przechowywania labiryntu.
+  W przypadku wyboru ręcznego wpistwania w pliku main jest zaimplementowana funkcjonalność samodzielnego utworzenia labiryntu przez podanie wymiarów tablicy a następnie wypełnienie jej dozwolonymi znakami. Program sprawdzi czy stworzony w ten sposób labirynt zawiera "$" oraz "@". 
 
   Wczytaj
   Plik ten zawiera funkcję która pozwala wczytać labirynt z pliku txt. W obecnej formie plik musi znajdować się w katalogu głównym projektu, jednak można wskazać inny plik zmieniając zawartość zmiennej "plik" np. na inną nazwę lub ścierzkę do innego pliku. 
